@@ -23,15 +23,19 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:prettier/recommended",
-    "plugin:jest/recommended" // 추가
+    "plugin:jest/recommended"
   ],
-  "plugins": ["prettier", "@typescript-eslint", "jest", "import"], // 추가
-  "settings": {
-    "import/resolver": {
-      "typescript": {}
-    }
-  },
+  "plugins": ["prettier", "@typescript-eslint", "jest", "import"],
   "rules": {
-    "prettier/prettier": ["error", { "endOfLine": "auto" }]
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "import/extensions": [
+      "error",
+      {
+        "tsx": "never",
+        "ts": "never",
+        "js": "never",
+        "jsx": "never"
+      }
+    ]
   }
 }
