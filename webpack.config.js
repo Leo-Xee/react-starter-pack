@@ -76,7 +76,6 @@ module.exports = {
   devServer: {
     client: {
       overlay: true,
-      progress: true,
     },
     compress: true,
     hot: true,
