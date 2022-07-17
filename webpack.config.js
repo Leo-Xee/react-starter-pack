@@ -13,6 +13,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -81,5 +82,6 @@ module.exports = {
     hot: true,
     open: true,
     port: 3000,
+    historyApiFallback: true,
   },
 };
